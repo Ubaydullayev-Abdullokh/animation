@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+transition: all 0.4s ease;
+font-family:sans-serif;
+}
+
+
+body{
+width: 100%;
+height: 100vh;
+background: black;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.content{
+    position: relative;
+}
+.content h1 {
+    position: absolute;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    font-size: 8em;
+    text-transform: uppercase;
+
+}
+.content h1:nth-child(1) {
+    color: #03a9f4;
+    animation: water 3s ease infinite;
+}
+.content h1:nth-child(2) {
+    color: transparent;
+    -webkit-text-stroke:  2px #03a9f4;
+
+}
+
+@keyframes water{
+    0%,100%{
+        clip-path: polygon(22% 36%, 35% 39%, 46% 49%, 61% 57%, 74% 57%, 88% 48%, 100% 42%, 100% 100%, 100% 100%, 0 100%, 0 48%, 10% 39%);
+    }
+    50%{
+        clip-path: polygon(28% 55%, 41% 52%, 53% 45%, 65% 38%, 78% 34%, 89% 35%, 100% 38%, 100% 100%, 100% 100%, 0 100%, 0 45%, 15% 50%);
+    }
+}
